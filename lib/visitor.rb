@@ -13,9 +13,6 @@ attr_writer :spending_money
     @preferences.push(preference)
   end
 
-  #method to check if visitor is tall enough
-  #accepts argument of required height 
-
   def tall_enough?(height_requirement)
     @height >= height_requirement
   end

@@ -15,19 +15,12 @@ attr_reader :name,
     @rider_log = Hash.new(0)
   end
 
-    def board_rider(visitor) 
-      if visitor.height >= @min_height && visitor.preferences.include?(@excitement)
-        @rider_log[visitor] += 1
-      end
-      
+  def board_rider(visitor) 
+    if visitor.height >= @min_height && visitor.preferences.include?(@excitement)
+      @rider_log[visitor] += 1
+      @spending_money = visitor.spending_money -= @admission_fee
       @total_revenue = @total_revenue += @admission_fee
     end
-
-  # def board_rider(visitor)
-  #   if visitor.height > @min_height && visitor.preferences.include?(@excitement)
-
-  #   end
- 
- 
-  # end
+      
+  end
 end

@@ -12,7 +12,7 @@ RSpec.describe Carnival do
   end
 
   it 'can add rides' do 
-    carnival = Carnival.new({ duration: 30 })
+    carnival = Carnival.new({ duration: "30 days" })
 
     ride1 = Ride.new({ name: 'Carousel', min_height: 24, admission_fee: 1, excitement: :gentle })
     ride2 = Ride.new({ name: 'Ferris Wheel', min_height: 36, admission_fee: 5, excitement: :gentle })

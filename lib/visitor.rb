@@ -9,10 +9,6 @@ attr_writer :spending_money
     @preferences = []
   end
 
-  # def spending_money
-  #   @spending_money = @spending_money
-  # end
-
   def add_preference(preference) 
     @preferences.push(preference)
   end
@@ -23,6 +19,4 @@ attr_writer :spending_money
   def tall_enough?(height_requirement)
     @height >= height_requirement
   end
-
-  
 end
